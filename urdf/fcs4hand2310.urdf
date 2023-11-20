@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<robot name="fcs2310">
+  <link name="base">
+    <visual name="base plate">
+      <!-- <origin xyz="0.002 0 -0.01" /> -->
+      <!-- <geometry> -->
+      <!-- 	<box size="0.004 0.1 0.07"/> -->
+      <!-- </geometry> -->
+      <origin xyz="0 0 0.0022" rpy="-1.57079632675 0 -1.57079632675"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/FCS4HAND2310_BASE.dae"/>
+      </geometry>
+      <material name="gray80">
+	<color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <visual name="R30xxx (J00)">
+      <origin xyz="0.060 -0.0358 0.035" rpy="0 0 1.57079632675"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/RS30x_BottomShaft.dae"/>
+      </geometry>
+      <material name="blue">
+	<color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <visual name="R30xxx (J10)">
+      <origin xyz="-0.030 0.0356 0.035" rpy="0 0 -1.57079632675"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/RS30x_BottomShaft.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <visual name="base LID">
+      <origin xyz="0.025 0 0" rpy="1.57079632675 0 1.57079632675"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/FCS4HAND2310_BASE_LID.dae"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="FG00">
+    <visual name="FG00">
+      <!-- <origin xyz="0.030 0.015 0.0"/> -->
+      <!-- <geometry> -->
+      <!-- 	<box size="0.060 0.003 0.040"/> -->
+      <!-- </geometry> -->
+      <origin xyz="0.0 0.033 0.025" rpy="3.141592653589793 0 1.57079632679489661923"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/FCS4HAND2310_FINGER_ROOT_RH.dae"/>
+      </geometry>
+      <material name="gray80">
+	<color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <visual name="RS3xxx (J01)">
+      <origin xyz="0.0425 -0.041 0.035" rpy="0 0 0"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/RS30x_BottomShaft.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+  <link name="FG01">
+    <visual name="FG01">
+      <!-- <origin xyz="0.05 0.011 0.0"/> -->
+      <!-- <geometry> -->
+      <!-- 	<box size="0.050 0.003 0.015"/> -->
+      <!-- </geometry> -->
+      <origin xyz="0.0 0.0 -0.020" rpy="0 0 -1.57079632679489661923"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/FCS4HAND2310_FINGER_EDGE_RH.dae"/>
+      </geometry>
+      <material name="gray80"/>
+    </visual>
+  </link>
+  <link name="FG10">
+    <visual name="FG10">
+      <!-- <origin xyz="0.03 -0.015 0.0"/> -->
+      <!-- <geometry> -->
+      <!-- 	<box size="0.06 0.003 0.04"/> -->
+      <!-- </geometry> -->
+      <origin xyz="0.0 0.0 0.025" rpy="3.141592653589793 0 1.57079632679489661923"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/FCS4HAND2310_FINGER_ROOT_LH.dae"/>
+      </geometry>
+      <material name="gray80"/>
+    </visual>
+    <visual name="RS3xxx (J11)">
+      <!-- <origin xyz="0.0425 -0.041 0.035" rpy="0 0 0"/> -->
+      <origin xyz="0.0425 -0.049 0.035" rpy="0 0 0"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/RS30x_BottomShaft.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+  <link name="FG11">
+    <visual>
+      <!-- <origin xyz="0.05 -0.011 0.016"/> -->
+      <!-- <geometry> -->
+      <!-- 	<box size="0.050 0.003 0.012"/> -->
+      <!-- </geometry> -->
+      <origin xyz="0.0 0.005 -0.020" rpy="0 0 -1.57079632679489661923"/>
+      <geometry>
+	<mesh filename="package://fcs4hand2310/urdf/FCS4HAND2310_FINGER_EDGE_LH.dae"/>
+      </geometry>
+      <material name="gray80"/>
+    </visual>
+    <visual>
+      <origin xyz="0.05 -0.011 -0.016"/>
+      <geometry>
+	<box size="0.05 0.003 0.012"/>
+      </geometry>
+      <material name="gray80"/>
+    </visual>
+  </link>
+  <link name="hub31x2">
+    <visual name="TB-DF31DF (1/2)">
+      <origin xyz="0 -0.023 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.012 0.040 0.014"/>
+      </geometry>
+      <material name="gray40">
+	<color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <visual name="TB-DF31DF (2/2)">
+      <origin xyz="0  0.023 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.012 0.040 0.014"/>
+      </geometry>
+    </visual>
+  </link>
+  <!-- <link name="hub71"> -->
+  <!--   <visual name="TB-RV71EH (body)"> -->
+  <!--     <!-\- <origin xyz="0.009 -0.010 -0.030" rpy="0 0 0"/> -\-> -->
+  <!--     <origin xyz="0 0 0" rpy="0 0 0"/> -->
+  <!--     <geometry> -->
+  <!-- 	<box size="0.020 0.062 0.014"/> -->
+  <!--     </geometry> -->
+  <!--     <material name="gray40"> -->
+  <!-- 	<color rgba="0.4 0.4 0.4 1.0"/> -->
+  <!--     </material> -->
+  <!--   </visual> -->
+  <!--   <visual name="TB-RV71EH (switch)"> -->
+  <!--     <!-\- <origin xyz="0.012 -0.024 -0.024" rpy="0 0 0"/> -\-> -->
+  <!--     <origin xyz="0.003 0.014  0.006" rpy="0 0 0"/> -->
+  <!--     <geometry> -->
+  <!-- 	<box size="0.006 0.014 0.020"/> -->
+  <!--     </geometry> -->
+  <!--     <material name="gray40"/> -->
+  <!--   </visual> -->
+  <!-- </link> -->
+  <!-- <link name="PET bottle"> -->
+  <!--   <visual> -->
+  <!--     <geometry> -->
+  <!-- 	<cylinder length="0.230" radius="0.035"/> -->
+  <!--     </geometry> -->
+  <!--     <material name="orange"> -->
+  <!-- 	<color rgba="1.0 0.647 0.0 1.0"/> -->
+  <!--     </material> -->
+  <!--   </visual> -->
+  <!-- </link> -->
+  <joint name="hndj00" type="revolute">
+    <origin xyz="0.0155 -0.0175 0.0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base"/>
+    <child link="FG00"/>
+    <limit effort="30" velocity="1.0" lower="-1.57079632679489661923" upper="0"/>
+  </joint>
+  <joint name="hndj01" type="revolute">
+    <origin xyz="0.061 0.004 0.0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="FG00"/>
+    <child link="FG01"/>
+    <limit effort="30" velocity="1.0" lower="-2.61799387799149436538" upper="2.61799387799149436538"/>
+  </joint>
+  <joint name="hndj10" type="revolute">
+    <origin xyz="0.0155 0.0175 0.0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base"/>
+    <child link="FG10"/>
+    <limit effort="30" velocity="1.0" lower="0" upper="1.57079632679489661923"/>
+  </joint>
+  <joint name="hndj11" type="revolute">
+    <origin xyz="0.061 -0.004 0.0"/>
+    <axis xyz="0 0 1"/>
+    <parent link="FG10"/>
+    <child link="FG11"/>
+    <limit effort="30" velocity="1.0" lower="-2.61799387799149436538" upper="2.61799387799149436538"/>
+  </joint>
+  <joint name="hub" type="fixed">
+    <origin xyz="0.013 0 0.040" rpy="0 1.57079632679489661923 0"/> 
+    <parent link="base"/>
+    <child link="hub31x2"/>
+  </joint>
+  <!-- <joint name="hub" type="fixed"> -->
+  <!--   <origin xyz="0.013 0 0.041" rpy="0 1.57079632679489661923 0"/> -->
+  <!--   <parent link="base"/> -->
+  <!--   <child link="hub71"/> -->
+  <!-- </joint> -->
+  <!-- <joint name="PET bottle" type="fixed"> -->
+  <!--   <origin xyz="0.068 0 0"/> -->
+  <!--   <parent link="base"/> -->
+  <!--   <child link="PET bottle"/> -->
+  <!-- </joint> -->
+  
+</robot>
