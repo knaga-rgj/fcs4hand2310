@@ -113,43 +113,43 @@
       <material name="gray80"/>
     </visual>
   </link>
-  <link name="hub31x2">
-    <visual name="TB-DF31DF (1/2)">
-      <origin xyz="0 -0.023 0" rpy="0 0 0"/>
-      <geometry>
-	<box size="0.012 0.040 0.014"/>
-      </geometry>
-      <material name="gray40">
-	<color rgba="0.4 0.4 0.4 1.0"/>
-      </material>
-    </visual>
-    <visual name="TB-DF31DF (2/2)">
-      <origin xyz="0  0.023 0" rpy="0 0 0"/>
-      <geometry>
-	<box size="0.012 0.040 0.014"/>
-      </geometry>
-    </visual>
-  </link>
-  <!-- <link name="hub71"> -->
-  <!--   <visual name="TB-RV71EH (body)"> -->
-  <!--     <!-\- <origin xyz="0.009 -0.010 -0.030" rpy="0 0 0"/> -\-> -->
-  <!--     <origin xyz="0 0 0" rpy="0 0 0"/> -->
+  <!-- <link name="hub31x2"> -->
+  <!--   <visual name="TB-DF31DF (1/2)"> -->
+  <!--     <origin xyz="0 -0.023 0" rpy="0 0 0"/> -->
   <!--     <geometry> -->
-  <!-- 	<box size="0.020 0.062 0.014"/> -->
+  <!-- 	<box size="0.012 0.040 0.014"/> -->
   <!--     </geometry> -->
   <!--     <material name="gray40"> -->
   <!-- 	<color rgba="0.4 0.4 0.4 1.0"/> -->
   <!--     </material> -->
   <!--   </visual> -->
-  <!--   <visual name="TB-RV71EH (switch)"> -->
-  <!--     <!-\- <origin xyz="0.012 -0.024 -0.024" rpy="0 0 0"/> -\-> -->
-  <!--     <origin xyz="0.003 0.014  0.006" rpy="0 0 0"/> -->
+  <!--   <visual name="TB-DF31DF (2/2)"> -->
+  <!--     <origin xyz="0  0.023 0" rpy="0 0 0"/> -->
   <!--     <geometry> -->
-  <!-- 	<box size="0.006 0.014 0.020"/> -->
+  <!-- 	<box size="0.012 0.040 0.014"/> -->
   <!--     </geometry> -->
-  <!--     <material name="gray40"/> -->
   <!--   </visual> -->
   <!-- </link> -->
+  <link name="hub71">
+    <visual name="TB-RV71EH (body)">
+      <!-- <origin xyz="0.009 -0.010 -0.030" rpy="0 0 0"/> -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.020 0.062 0.014"/>
+      </geometry>
+      <material name="gray40">
+	<color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <visual name="TB-RV71EH (switch)">
+      <!-- <origin xyz="0.012 -0.024 -0.024" rpy="0 0 0"/> -->
+      <origin xyz="0.003 0.014  0.006" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.006 0.014 0.020"/>
+      </geometry>
+      <material name="gray40"/>
+    </visual>
+  </link>
   <!-- <link name="PET bottle"> -->
   <!--   <visual> -->
   <!--     <geometry> -->
@@ -188,16 +188,16 @@
     <child link="FG11"/>
     <limit effort="30" velocity="1.0" lower="-2.61799387799149436538" upper="2.61799387799149436538"/>
   </joint>
-  <joint name="hub" type="fixed">
-    <origin xyz="0.013 0 0.040" rpy="0 1.57079632679489661923 0"/> 
-    <parent link="base"/>
-    <child link="hub31x2"/>
-  </joint>
   <!-- <joint name="hub" type="fixed"> -->
-  <!--   <origin xyz="0.013 0 0.041" rpy="0 1.57079632679489661923 0"/> -->
+  <!--   <origin xyz="0.013 0 0.040" rpy="0 1.57079632679489661923 0"/>  -->
   <!--   <parent link="base"/> -->
-  <!--   <child link="hub71"/> -->
+  <!--   <child link="hub31x2"/> -->
   <!-- </joint> -->
+  <joint name="hub" type="fixed">
+    <origin xyz="0.013 0 0.041" rpy="0 1.57079632679489661923 0"/>
+    <parent link="base"/>
+    <child link="hub71"/>
+  </joint>
   <!-- <joint name="PET bottle" type="fixed"> -->
   <!--   <origin xyz="0.068 0 0"/> -->
   <!--   <parent link="base"/> -->

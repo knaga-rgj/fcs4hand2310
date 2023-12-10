@@ -15,7 +15,7 @@ def generate_launch_description():
     urdf_content = xacro.process_file(xacro_file).toprettyxml()
 
     ros2_control_params = {"robot_description": urdf_content,
-                           "update_rate" : 50,
+                           "update_rate" : 20,
                            "joint_state_broadcaster_fcs4hand2310" : {  "type": "joint_state_broadcaster/JointStateBroadcaster" },
                            "joint_trajectory_controller_fcs4hand2310" : { "type": "joint_trajectory_controller/JointTrajectoryController"},
                            }

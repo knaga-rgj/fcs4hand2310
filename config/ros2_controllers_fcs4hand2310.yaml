@@ -9,10 +9,8 @@ joint_trajectory_controller_fcs4hand2310:
     joints: [ hndj00, hndj01, hndj10, hndj11 ]
     command_interfaces: [ position ]
     state_interfaces:   [ position ]
-
     state_publish_rate:   2.0 # Defaults to 50
     action_monitor_rate:  2.0 # Defaults to 20
-
     allow_partial_joints_goal: false # Defaults to false
     open_loop_control: true
     allow_integration_in_goal_trajectories: true
