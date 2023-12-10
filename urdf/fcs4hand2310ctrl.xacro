@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<robot name="fcs2310" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="fcs4hand2310" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:include filename="$(find fcs4hand2310)/urdf/fcs4hand2310.urdf"/>
 
-  <ros2_control name="fcs" type="system">
+  <ros2_control name="fcs0" type="system">
     <hardware>
       <plugin>hardware_fcs/HardwareFCS</plugin>
       <param name="device">/dev/ttyUSB0</param>
